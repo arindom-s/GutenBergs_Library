@@ -1,0 +1,13 @@
+{
+  "folders": [
+	{
+		"name": "express-locallibrary-tutorial",
+		"path": "."
+	},
+	{
+		"name": "Library",
+		"path": "../../../Library"
+	}
+],
+  "settings": {}
+}

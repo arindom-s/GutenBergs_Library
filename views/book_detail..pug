@@ -1,0 +1,36 @@
+extends layout 
+
+block content 
+ h1 Title: #{book.title}
+
+ p #[strong Author: ]
+  a(href=book.author.url) #{book.author.name}
+ p #[strong Summary: ] #{book.summary}
+ p #[strong ISBN: ] #{book.isbn}
+ p #[strong Genre: ] 
+   each val, index in book.genre 
+    a(href=val.url)  #{val.name}
+    if index< book.genre.length -1
+     |,&nbsp;   
+  
+ div(style='margin-left:1rem; margin-top:1rem')
+  h2(style='font-size: 1.3rem; font-family: "Comic sans", cursive,sans-serif;')Copies
+
+  each val in bookinstances
+    hr
+    if val.status=='Available'
+     p.text-success #{val.status}
+    else if val.status=='Maintenance'
+     p.text-danger #{val.status}
+    p #[strong Imprint: ] #{val.imprint}
+    if val.status!='Available'
+     p #[strong Due Back: ]  val.due_back
+    p #[strong Id: ]
+     a(href=val.url) #{val._id}
+  else 
+    p No copies of this book here 
+  hr
+  p 
+    a(href=book.url +'/delete') Delete Book :/
+  p 
+    a(href=book.url + '/update') Update Book :@
