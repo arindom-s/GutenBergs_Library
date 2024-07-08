@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node app",
-    "devstart": "nodemon ./bin/www",
+    "devstart": "nodemon app",
     "serverstart": "SET DEBUG=express-locallibrary-tutorial:* & npm run devstart"
   },
   "dependencies": {

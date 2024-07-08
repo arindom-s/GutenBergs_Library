@@ -2,9 +2,10 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #[em  GutenBerg's Library], a stop for you bibliophiles I made while learning Express and Pug
+  p Welcome to #[em  GutenBerg's Library], a stop for you bibliophiles I made while learning Express and Pug. This website allows you to keep account of a whole plethora of books which you are fond of. You can also keep count of the authors and the genres.Create new book allows you to store information about a new book you just read or are going to read. But first and foremost you must add the author if this is the first time you picked his/her book.
+  p Thanks to the author information you can check the books he/she has written. Moreover you can store details about your favourite genres like Action, Sci-fi, Romance and a lot.
   h2 Dynamic stuff ahead
-  p We keep the following record counts: 
+  p We keep the following record counts so you know how much of a book-worm you are: 
   ul 
     li #[strong Books:] !{book_count}
     li #[strong Copies:] !{bookinstance_count}
